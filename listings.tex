@@ -1,0 +1,66 @@
+% 
+% (c) Copyright 2020 Jan Brupbacher
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifx\GUARDlistings\undefined
+\def\GUARDlistings{}
+
+\lstset{%
+    firstnumber=1,
+    backgroundcolor=\color{gray!10},	% choose the background color
+    basicstyle=\normalsize\ttfamily, 		% the size of the fonts that are used for the code
+    belowcaptionskip=1\baselineskip,		
+    breakatwhitespace=false,         		% sets if automatic breaks should only happen at whitespace
+    breaklines=true,                 		% sets automatic line breaking
+    captionpos=b,                    		% sets the caption-position to bottom
+    commentstyle=\color{commentgreen}, 		% comment style
+    deletekeywords={...},            		% if you want to delete keywords from the given language
+    otherkeywords={},            			% if you want to add more keywords to the set
+    escapeinside={\%*}{*\%},          		% if you want to add LaTeX within your code
+    extendedchars=true,             		% lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+    frame=tb,	                 			% adds a frame around the code
+    keepspaces=true,                 		% keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\color{keywordblue},  		% keyword style
+    numbers=none,                    		% where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   		% how far the line-numbers are from the code
+    numberstyle=\footnotesize\color{numbergray}, % the style that is used for the line-numbers
+    rulecolor=\color{black},         		% if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                		% show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,          		% underline spaces within strings only
+    showtabs=false,                  		% show tabs within strings adding particular underscores
+    stepnumber=1,                    		% the step between two line-numbers. If it's 1, each line will be numbered
+    stringstyle=\color{stringmauve},   		% string literal style
+    tabsize=4,	                     		% sets default tabsize to 2 spaces
+}
+
+\lstdefinestyle{Java}{
+	language=Java,
+	otherkeywords={@Override, var},
+	keywordstyle=\color{keywordorange},
+	commentstyle=\color{commentmauve},
+	stringstyle=\color{stringgreen},
+}
+
+\lstdefinestyle{C}{
+	language=C,
+	keywordstyle=\color{keywordblue},
+	commentstyle=\color{commentgreen},
+	stringstyle=\color{orange},
+}
+
+\lstdefinestyle{Cpp}{
+	language=C++,
+	keywordstyle=\color{keywordpurple},
+	commentstyle=\color{commentgreen},
+	stringstyle=\color{orange},
+}
+
+\lstdefinestyle{Matlab}{
+	language = Matlab,
+	commentstyle=\color{commentgreen},
+	keywordstyle=\color{keywordblue},
+	stringstyle=\color{stringmauve},
+	numbers=left,	% where to put the line-numbers; (none, left, right)
+	xleftmargin=10pt,
+}
