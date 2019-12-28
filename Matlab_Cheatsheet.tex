@@ -11,10 +11,20 @@
 
 \include{header}
 \include{listings}
-%\include{definitions}
+
+\usepackage{bold-extra}
 
 \begin{document}
-	\textbf{\huge \Title}\\
+	\textbf{\Huge\Title}\\
+	\vspace*{-0.1cm}\\
 	\lstset{style=Matlab}
-	\lstinputlisting{Code.m}
+	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Einige kleine Kniffs}
+	\lstinputlisting{code/tricks.m}
+	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Least Square implementation}
+	\lstinputlisting{code/least_square.m}
+	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Transfer function}
+	\lstinputlisting{code/transfer_function.m}
+	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Gleichung (System) symbolisch l\"osen}
+	\lstinputlisting{code/symbolic.m}
+	%\lstinputlisting{Code.m}
 \end{document}
