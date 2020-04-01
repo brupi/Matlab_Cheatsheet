@@ -6,10 +6,10 @@
 \documentclass[
 11pt,
 a4paper,
-oneside,
+twoside,
 plainfootsepline,
 plainfootbotline,
-]{scrbook}
+]{scrartcl}
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc} 
@@ -18,12 +18,13 @@ plainfootbotline,
 \usepackage{pdfpages}
 \usepackage{hyperref}
 \usepackage{layout}
-\usepackage[paper=a4paper,left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[paper=a4paper,left=1cm,right=1cm,top=0.7cm,bottom=0.7cm,includeheadfoot]{geometry}
 \usepackage{chngpage}
 \usepackage{expdlist}
 \usepackage{ifthen}
 \usepackage{fancybox}
 \usepackage{titletoc}
+\usepackage{titlesec}
 \usepackage[perpage,multiple]{footmisc}
 \usepackage{type1ec}
 \usepackage{placeins}
@@ -73,27 +74,45 @@ plainfootbotline,
 \usepackage{makeidx}
 \usepackage{multicol}
 
-
 \input{color}
 \input{definitions}
 
+% header and footer definitions
 \usepackage{scrpage2}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\ihead{\fontsize{8pt}{1ex}\textsf{\upshape{\today}}}
+\ihead{\fontsize{8pt}{1ex}\normalfont{\upshape{\today}}}
 \chead{}
-\ohead{\fontsize{8pt}{1ex}\textsf{\upshape{\Title}}}
-\ifoot{\fontsize{8pt}{1ex}\textsf{\upshape{\Author}}}
+\ohead{\fontsize{8pt}{1ex}\normalfont{\upshape{\Title}}}
+\ifoot{\fontsize{8pt}{1ex}\normalfont{\upshape{\Author}}}
 \cfoot{}
-\ofoot{\fontsize{8pt}{1ex}\textsf{\upshape{\thepage}}}
+\ofoot{\fontsize{8pt}{1ex}\normalfont{\upshape{\thepage}}}
 \setheadsepline{0.5pt}
 \setfootsepline{0.5pt}
 \pagestyle{scrheadings}
-\renewcommand*{\chapterpagestyle}{scrheadings}
 
-\setlength{\textwidth}{520pt}
-\setlength{\textheight}{765pt}
-\setlength{\parindent}{0pt}
-\setlength{\oddsidemargin}{-30pt}
-\setlength{\topmargin}{-60pt}
-\setlength{\footskip}{20pt}
+% Page geometry
+\setlength{\textwidth}{540pt}
+\setlength{\textheight}{750pt}
 \setlength{\headsep}{10pt}
+\setlength{\footskip}{22pt}
+
+% Sectiontitle style
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titlespacing*{\section}{0em}{0.5em}{0.5em}
+\titleformat{\section}[hang]{\normalfont\Large\bfseries}
+	{\thesection\hspace*{5pt}}
+	{5pt}{\normalfont\Large\bfseries}
+\titlespacing*{\subsection}{0em}{0.5em}{0.5em}
+\titleformat{\subsection}[hang]{\normalfont\large\bfseries}
+	{\thesubsection\hspace*{5pt}}
+	{5pt}{\normalfont\large\bfseries}
+\titlespacing*{\subsubsection}{0em}{0.5em}{0.5em}
+\titleformat{\subsubsection}[hang]{\normalfont\normalsize\bfseries}
+	{\thesubsubsection\hspace*{5pt}}
+	{5pt}{\normalfont\normalsize\bfseries}
+\titlespacing*{\paragraph}{0em}{0.5em}{0.5em}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}
+	{\theparagraph\hspace*{5pt}}
+	{5pt}{\normalfont\normalsize\bfseries}
+

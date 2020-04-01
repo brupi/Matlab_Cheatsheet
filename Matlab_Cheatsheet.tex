@@ -4,27 +4,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\Author}{\copyright Jan Brupbacher}
-\newcommand{\Title}{Matlab Cheatsheet}
+\newcommand{\Title}{Matlab - CheatSheet}
 
-\author{\href{mailto:jan.brupbacher@hsr.ch}{\Author}}
+\author{\Author}
 \title{\Title}
 
 \include{header}
-\include{listings}
+\include{listings}	
 
 \usepackage{bold-extra}
 
+\dottedcontents{section}[3.3em]{\bfseries}{2.3em}{1pc}
+
 \begin{document}
-	\textbf{\Huge\Title}\\
-	\vspace*{-0.1cm}\\
-	\lstset{style=Matlab}
-	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Einige kleine Kniffs}
+%%%% Titlepage %%%%
+	\maketitle
+	%\thispagestyle{empty}
+	\vspace{1em}
+	\begin{adjustwidth}{4em}{4em}
+		\tableofcontents
+	\end{adjustwidth}
+	\newpage
+	
+%%% Inhalt %%%
+	\lstset{
+		style=Matlab,
+		numbers=left,
+		xleftmargin=15pt,
+	}
+	\section{Einige kleine Kniffs}
 	\lstinputlisting{code/tricks.m}
-	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Least Square implementation}
+	\section{Least Square implementation}
 	\lstinputlisting{code/least_square.m}
-	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Transfer function}
+	\section{Transfer function}
 	\lstinputlisting{code/transfer_function.m}
-	\includegraphics[width=0.02\textwidth]{pics/coding.png} \textbf{\Large Gleichung (System) symbolisch l\"osen}
+	\section{Gleichung (System) symbolisch l\"osen}
 	\lstinputlisting{code/symbolic.m}
-	%\lstinputlisting{Code.m}
+	\section{Bode and Nyquist plot}
+	\lstinputlisting{code/bode_nyquist.m}
 \end{document}
