@@ -19,7 +19,7 @@
 \begin{document}
 %%%% Titlepage %%%%
 	\maketitle
-	%\thispagestyle{empty}
+	\thispagestyle{empty}
 	\vspace{1em}
 	\begin{adjustwidth}{4em}{4em}
 		\tableofcontents
@@ -32,6 +32,8 @@
 		numbers=left,
 		xleftmargin=15pt,
 	}
+	\section{Basics}
+	\lstinputlisting{code/basics.m}
 	\section{Einige kleine Kniffs}
 	\lstinputlisting{code/tricks.m}
 	\section{Least Square implementation}
@@ -42,4 +44,6 @@
 	\lstinputlisting{code/symbolic.m}
 	\section{Bode and Nyquist plot}
 	\lstinputlisting{code/bode_nyquist.m}
+	\section{State-Space to Transfer function}
+	\lstinputlisting{code/ss2tf.m}
 \end{document}
